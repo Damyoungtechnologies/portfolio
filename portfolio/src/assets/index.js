@@ -1,0 +1,9 @@
+export { default as herobackground } from "./images/bg_1.webp";
+export { default as my_portrait } from "./images/my_portrait.png";
+export { default as port1 } from "./images/port1.webp";
+export { default as port2 } from "./images/port2.webp";
+export { default as port3 } from "./images/port3.webp";
+export { default as port4 } from "./images/port4.webp";
+export { default as port5 } from "./images/port5.webp";
+export { default as port6 } from "./images/port6.webp";
+export { default as whatsapp } from "./images/whatsapp_scan_code.png";
