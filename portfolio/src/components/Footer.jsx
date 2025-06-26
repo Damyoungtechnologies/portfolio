@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h1
               style={{
-                fontSize: "1.8rem",
+                fontSize: "1.2rem",
                 fontWeight: "bold",
                 marginBottom: "15px",
               }}
@@ -148,7 +148,7 @@ const Footer = () => {
           <div>
             <h1
               style={{
-                fontSize: "1.8rem",
+                fontSize: "1.2rem",
                 fontWeight: "bold",
                 marginBottom: "15px",
               }}
@@ -199,7 +199,7 @@ const Footer = () => {
           <div>
             <h1
               style={{
-                fontSize: "1.8rem",
+                fontSize: "1.2rem",
                 fontWeight: "bold",
                 marginBottom: "15px",
               }}
