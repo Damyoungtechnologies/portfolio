@@ -6,12 +6,12 @@ const About = () => {
   return (
     <section id="about" className="about ">
       <div className="">
-        <div className="about-container w-[90%] mx-auto">
-          <div className="about-image flex justify-center">
+        <div className="about-container w-[90%] mx-auto flex items-start gap-4 flex-col md:flex-row ">
+          <div className="about-image flex items-start justify-center">
             <img
               src={my_portrait}
               alt="About me"
-              className="!w-full !h-[80vh] !object-contain"
+              className="xl:!w-100 !object-contain rounded-sm"
             />
           </div>
           <AboutTabs />

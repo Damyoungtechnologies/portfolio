@@ -4,16 +4,15 @@ import React from "react";
 const Hero = () => {
   return (
     <section id="" className="hero">
-      <div className="h-full flex items-center  lg:mt-32 lg:ml-8">
+      <div className="md:h-[50vh] lg:h-1/2 xl:h-full flex items-center mt-32 ml-8">
         <div className="hero-content">
           <h3 className="there">Hi There!</h3>
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
             I am Samuel Ayodeji
           </h1>
-          <h1 className="text-[4rem] font-light">I love Design</h1>
+          <h1 className="text-[4rem] font-light">I love Innovation</h1>
           <p style={{ margin: "30px 0 50px", fontSize: "18px" }}>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
+            Passionate about science, tech, and leadership, inspiring progress.
           </p>
           <div
             className="action"

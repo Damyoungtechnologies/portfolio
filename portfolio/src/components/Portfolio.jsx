@@ -22,7 +22,6 @@ const Portfolio = () => {
             My choicest Gallery
           </h1>
         </div>
-
         <div className="">
           <PortfolioItem />
         </div>

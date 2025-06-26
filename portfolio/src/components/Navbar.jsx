@@ -36,7 +36,7 @@ const Navbar = () => {
         scrolled ? "navbar-colored" : "navbar-transparent"
       } w-full fixed top-0 z-3 transition-300 ease`}
     >
-      <div className="px-6 lg:px-16 lg:py-8">
+      <div className="px-6 md:px-16 md:py-4 lg:px-16 lg:py-8">
         <div className="flex justify-between items-center">
           <h2 className="text-[1.5rem] md:text-xl lg:text-2xl font-bold">
             Samuel Ayodeji

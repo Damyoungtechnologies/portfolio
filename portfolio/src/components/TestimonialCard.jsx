@@ -1,6 +1,6 @@
 import React from "react";
 
-const TestimonialCard = () => {
+const TestimonialCard = ({ image, full_name, role, testimony }) => {
   return (
     <div className="service-card">
       <div
@@ -13,9 +13,14 @@ const TestimonialCard = () => {
       >
         <div style={{ position: "relative" }}>
           <img
-            src="/placeholder.svg?height=100&width=100"
+            src={image}
             alt="Testimonial"
-            style={{ width: "100px", height: "100px", borderRadius: "50%" }}
+            style={{
+              width: "100px",
+              height: "100px",
+              borderRadius: "50%",
+              objectFit: "cover",
+            }}
           />
           <span
             style={{
@@ -45,18 +50,17 @@ const TestimonialCard = () => {
           </span>
         </div>
         <div>
-          <h1 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-            Roger Scott
+          <h1
+            style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#0779e4" }}
+          >
+            {full_name}
           </h1>
-          <p style={{ color: "#0779e4" }}>Marketing Manager</p>
+          <p style={{ color: "#0779e4" }}>{role}</p>
         </div>
       </div>
 
       <div>
-        <p style={{ color: "#666", lineHeight: "1.6" }}>
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia, there live the blind texts.
-        </p>
+        <p style={{ color: "#666", lineHeight: "1.6" }}>{testimony}</p>
       </div>
     </div>
   );

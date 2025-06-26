@@ -81,7 +81,7 @@ const AboutTabs = () => {
             </h1>
             <p style={{ color: "#666", lineHeight: "1.6" }}>
               I am a first-class graduate of the University of Nigeria, Nsukka.
-              I am a double honors graduate in Plant Science and Biotechnology/
+              I am a double honors holder in Plant Science and Biotechnology/
               Zoology and Environmental Biology. I am a leadership trainer and a
               multiple-award winning scholar, some of which include the
               prestigious international{" "}

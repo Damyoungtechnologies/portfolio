@@ -3,20 +3,20 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact bg-[#FFF]">
       <div className="">
-        <div className="contact-container">
+        <div className="contact-container justify-center items-center">
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126497.66962347066!2d4.480298696494794!3d7.784293140727144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787e4c949b8fd%3A0x33c62c1600f59277!2sOsogbo%2C%20Osun!5e0!3m2!1sen!2sng!4v1746651350057!5m2!1sen!2sng"
-              width="600"
-              height="450"
+              // width="600"
+              // height="450"
               style={{
                 border: 0,
                 width: "100%",
                 height: "100%",
                 minHeight: "400px",
-                borderRadius: "5px",
+                borderRadius: "0px 5px 5px 0px",
               }}
               allowFullScreen
               loading="lazy"
@@ -35,14 +35,20 @@ const Contact = () => {
             >
               Contact me
             </h1>
-            <p style={{ fontSize: "1.2rem", marginBottom: "30px" }}>
+            <p
+              style={{
+                fontSize: "1rem",
+                marginBottom: "30px",
+                color: "#0779E4",
+              }}
+            >
               We're open for any suggestion or just to have a chat
             </p>
 
             <div
               style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+                display: "flex",
+                flexDirection: "column",
                 gap: "20px",
                 marginBottom: "30px",
               }}
@@ -50,7 +56,7 @@ const Contact = () => {
               <div>
                 <h2
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "regular",
                     color: "#555",
                     marginBottom: "8px",
                   }}
@@ -64,7 +70,6 @@ const Contact = () => {
               <div>
                 <h2
                   style={{
-                    fontWeight: "bold",
                     color: "#555",
                     marginBottom: "8px",
                   }}
@@ -87,7 +92,6 @@ const Contact = () => {
               <div>
                 <h2
                   style={{
-                    fontWeight: "bold",
                     color: "#555",
                     marginBottom: "8px",
                   }}
@@ -112,6 +116,7 @@ const Contact = () => {
             <form style={{ width: "100%" }}>
               <div
                 style={{
+                  color: "black",
                   display: "flex",
                   flexDirection: "column",
                   gap: "15px",
@@ -205,13 +210,15 @@ const Contact = () => {
                   fontSize: "1.5rem",
                   fontWeight: "bold",
                   marginBottom: "15px",
+                  color: "#0566C5",
                 }}
               >
                 Follow me here
               </h1>
               <div style={{ display: "flex", gap: "15px" }}>
                 <a
-                  href="#"
+                  href="https://web.facebook.com/adedamolasamuel.ayodeji/"
+                  target="_blank"
                   style={{ color: "#0779e4", textDecoration: "none" }}
                   onMouseOver={(e) => {
                     e.target.style.textDecoration = "underline";
@@ -223,7 +230,7 @@ const Contact = () => {
                   Facebook
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/SamuelAyodeji28?t=rYlupSFz1Aaw2BaArCVCRg&s=09"
                   style={{ color: "#0779e4", textDecoration: "none" }}
                   onMouseOver={(e) => {
                     e.target.style.textDecoration = "underline";
@@ -235,7 +242,7 @@ const Contact = () => {
                   Twitter
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/adedamolasamuel.ayodeji?igsh=MWh3a2JuaWg5MjZxdQ=="
                   style={{ color: "#0779e4", textDecoration: "none" }}
                   onMouseOver={(e) => {
                     e.target.style.textDecoration = "underline";

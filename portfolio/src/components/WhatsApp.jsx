@@ -1,23 +1,36 @@
-"use client"
 import React from "react";
+import { whatsapp } from "../assets";
 
 const WhatsApp = () => {
   return (
     <section className="whatsapp-section">
-      <div className="">
+      <div className="w-[90%] mx-auto">
         <div className="whatsapp-container">
           <div className="whatsapp-content">
-            <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "15px" }}>
+            <h1
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+                marginBottom: "15px",
+              }}
+            >
               Have any works you want to done by me?
             </h1>
-            <p style={{ fontSize: "1.2rem" }}>Click the link below or scan the code to connect to my whatsapp</p>
+            <p style={{ fontSize: "1.2rem" }}>
+              Click the link below or scan the code to connect to my whatsapp
+            </p>
           </div>
           <div
             className="whatsapp-qr"
-            style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "15px" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "15px",
+            }}
           >
             <img
-              src="/placeholder.svg?height=200&width=200&text=QR+Code"
+              src={whatsapp}
               alt="WhatsApp QR Code"
               style={{
                 width: "200px",
@@ -40,12 +53,12 @@ const WhatsApp = () => {
                 transition: "all 0.3s ease",
               }}
               onMouseOver={(e) => {
-                e.target.style.backgroundColor = "white"
-                e.target.style.color = "#0779e4"
+                e.target.style.backgroundColor = "white";
+                e.target.style.color = "#0779e4";
               }}
               onMouseOut={(e) => {
-                e.target.style.backgroundColor = "transparent"
-                e.target.style.color = "white"
+                e.target.style.backgroundColor = "transparent";
+                e.target.style.color = "white";
               }}
             >
               Let's Connect on Whatsapp
@@ -54,7 +67,7 @@ const WhatsApp = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WhatsApp
+export default WhatsApp;
