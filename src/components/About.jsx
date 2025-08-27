@@ -11,7 +11,7 @@ const About = () => {
             <img
               src={my_portrait}
               alt="About me"
-              className="!h-[20] w-auto md:w-[50] object-contain rounded-sm"
+              className="h-[20] w-auto md:h-[50] object-contain rounded-sm"
             />
           </div>
           <AboutTabs />
