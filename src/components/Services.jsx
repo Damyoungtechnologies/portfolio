@@ -208,9 +208,7 @@ const Services = () => {
           >
             SERVICES
           </p>
-          <h1
-            style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#0779E4" }}
-          >
+          <h1 className="text-[#0779E4] font-bold text-sm">
             This is My Expertise, The <br />
             Services I'll Provide My Clients
           </h1>

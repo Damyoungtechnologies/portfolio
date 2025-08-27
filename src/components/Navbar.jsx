@@ -49,6 +49,7 @@ const Navbar = () => {
             style={{
               background: "none",
               border: "none",
+              outline: "none",
               color: "white",
               display: "none",
               cursor: "pointer",
@@ -60,30 +61,34 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <ul className="nav-links flex gap-8">
-            {["home", "about", "services", "Gallery", "contact"].map((item) => (
-              <li key={item} style={{ listStyle: "none" }}>
-                <a
-                  href={`#${item === "home" ? "" : item}`}
-                  className={`nav-link ${activeLink === item ? "active" : ""}`}
-                  onClick={() => handleLinkClick(item)}
-                  style={{
-                    color: "rgba(255, 255, 255, 0.7)",
-                    transition: "color 0.3s ease",
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.color = "white";
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.color =
-                      activeLink === item
-                        ? "white"
-                        : "rgba(255, 255, 255, 0.7)";
-                  }}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </a>
-              </li>
-            ))}
+            {["home", "about", "services", "portfolio", "contact"].map(
+              (item) => (
+                <li key={item} style={{ listStyle: "none" }}>
+                  <a
+                    href={`#${item === "home" ? "" : item}`}
+                    className={`nav-link ${
+                      activeLink === item ? "active" : ""
+                    }`}
+                    onClick={() => handleLinkClick(item)}
+                    style={{
+                      color: "rgba(255, 255, 255, 0.7)",
+                      transition: "color 0.3s ease",
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.color = "white";
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.color =
+                        activeLink === item
+                          ? "white"
+                          : "rgba(255, 255, 255, 0.7)";
+                    }}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
 

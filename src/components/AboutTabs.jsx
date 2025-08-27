@@ -25,6 +25,7 @@ const AboutTabs = () => {
             fontWeight: "bold",
             fontSize: "14px",
             border: "none",
+            outline: "none",
             cursor: "pointer",
             backgroundColor: activeTab === "about" ? "#0779e4" : "white",
             color: activeTab === "about" ? "white" : "#666",
@@ -56,6 +57,7 @@ const AboutTabs = () => {
             borderRadius: "5px",
             fontWeight: "bold",
             fontSize: "14px",
+            outline: "none",
             border: "none",
             cursor: "pointer",
             backgroundColor: activeTab === "experience" ? "#0779e4" : "white",
@@ -79,29 +81,19 @@ const AboutTabs = () => {
             >
               My Story
             </h1>
-            <p style={{ color: "#666", lineHeight: "1.6" }}>
-              I am a first-class graduate of the University of Nigeria, Nsukka.
-              I am a double honors holder in Plant Science and Biotechnology/
-              Zoology and Environmental Biology. I am a leadership trainer and a
-              multiple-award winning scholar, some of which include the
-              prestigious international{" "}
-              <b>Royal African Young Leadership Forum Award</b>.
-            </p>
-          </div>
-          <div>
-            <h1
-              style={{
-                fontSize: "1.8rem",
-                fontWeight: "bold",
-                marginBottom: "20px",
-                color: "#0779E4",
-              }}
+            <p
+              style={{ color: "#666", lineHeight: "1.6", textAlign: "justfy" }}
             >
-              I have been into web development since I was 23 years old.
-            </h1>
-            <p style={{ color: "#666", lineHeight: "1.6" }}>
-              I am a Researcher, a software engineer and a cybersecurity
-              personnel in training, among many other things.
+              A double honors holder in Plant Science and Biotechnology/Zoology
+              and Environmental Biology, and a first-class graduate of the
+              University of Nigeria, Nsukka, as well as the best graduating
+              student of the Department and the Faculty of Biological Science,
+              University of Nigeria, Nsukka (2021/2022 set). A leadership
+              trainer and a multiple-award-winning scholar, including the
+              prestigious international Royal African Young Leadership Forum
+              Award. 2024 Ten Outstanding Young Persons (TOYP) of Nigeria Awards
+              nominee (Academic Category). <br />A Researcher, a software
+              engineer and a penetration tester, among many other things.
             </p>
           </div>
         </>

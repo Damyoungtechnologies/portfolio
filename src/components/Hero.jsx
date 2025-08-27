@@ -4,7 +4,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section id="" className="hero">
-      <div className="md:h-[50vh] lg:h-1/2 xl:h-full flex items-center mt-32 ml-8">
+      <div className="flex w-[98%] md:w-[90%] items-center mt-16 md:mt-32 mx-auto">
         <div className="hero-content">
           <h3 className="there">Hi There!</h3>
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
@@ -16,7 +16,11 @@ const Hero = () => {
           </p>
           <div
             className="action"
-            style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}
+            style={{
+              display: "flex",
+              gap: "15px",
+              flexWrap: "wrap",
+            }}
           >
             <a
               href="#contact"

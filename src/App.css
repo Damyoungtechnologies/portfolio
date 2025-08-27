@@ -128,7 +128,7 @@
 }
 /* Hero section */
 .hero {
-  background-image: url("./assets/images/bg_1.webp");
+  background-image: url("./assets/images/heropage_background.png");
   background-color: red;
   background-size: cover;
   background-attachment: fixed;
@@ -141,7 +141,6 @@
 .hero-content {
   width: 60%;
   color: white;
-  padding: 0 30px;
   margin-bottom: 100px;
 }
 
