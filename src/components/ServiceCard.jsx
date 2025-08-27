@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import React from "react";
 
-import { useState } from "react"
-import ServiceModal from "./ServiceModal"
+import { useState } from "react";
+import ServiceModal from "./ServiceModal";
 
-const ServiceCard = ({ title, id, icon }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+const ServiceCard = ({ title, id, icon, text }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -42,8 +42,7 @@ const ServiceCard = ({ title, id, icon }) => {
               lineHeight: "1.6",
             }}
           >
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-            blind texts.
+            {text}
           </p>
         </div>
         <button
@@ -59,24 +58,37 @@ const ServiceCard = ({ title, id, icon }) => {
             fontSize: "16px",
           }}
           onMouseOver={(e) => {
-            e.target.style.textDecoration = "underline"
+            e.target.style.textDecoration = "underline";
           }}
           onMouseOut={(e) => {
-            e.target.style.textDecoration = "none"
+            e.target.style.textDecoration = "none";
           }}
         >
           Discover
           <span style={{ marginLeft: "5px" }}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M14 16.94v-4H5.08l-.03-2.01H14V6.94l5 5Z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M14 16.94v-4H5.08l-.03-2.01H14V6.94l5 5Z"
+              />
             </svg>
           </span>
         </button>
       </div>
 
-      <ServiceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} serviceId={id} />
+      <ServiceModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={title}
+        serviceId={id}
+      />
     </>
-  )
-}
+  );
+};
 
-export default ServiceCard
+export default ServiceCard;

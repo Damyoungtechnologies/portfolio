@@ -24,6 +24,7 @@ const Services = () => {
           <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
         </svg>
       ),
+      text: "UI/UX blends clarity and delight: intuitive interfaces, accessible flows, responsive design, visual hierarchy, feedback, consistency, iteration, empathy.",
     },
     {
       id: "webdev",
@@ -44,6 +45,7 @@ const Services = () => {
           <polyline points="8 6 2 12 8 18"></polyline>
         </svg>
       ),
+      text: "Web development blends structure and creativity: front-end visuals, back-end logic, accessibility, performance, security, and ongoing optimization.",
     },
     {
       id: "graphic",
@@ -66,6 +68,7 @@ const Services = () => {
           <line x1="15" y1="9" x2="15.01" y2="9"></line>
         </svg>
       ),
+      text: "Graphic design blends communication and aesthetics: typography, color, layout, imagery, branding, and user-focused visual problem solving.",
     },
     {
       id: "scratch",
@@ -87,6 +90,7 @@ const Services = () => {
           <line x1="12" y1="17" x2="12" y2="21"></line>
         </svg>
       ),
+      text: "Scratch nurtures curiosity: block-based coding, interactive projects, creativity, collaboration, debugging, sequencing, loops, events, and storytelling.",
     },
     {
       id: "video",
@@ -107,6 +111,7 @@ const Services = () => {
           <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
         </svg>
       ),
+      text: "Video editing blends storytelling and technique: footage, transitions, pacing, color correction, sound design, timing, and polish.",
     },
     {
       id: "data",
@@ -128,6 +133,7 @@ const Services = () => {
           <line x1="6" y1="20" x2="6" y2="14"></line>
         </svg>
       ),
+      text: "Data analytics turns raw information into actionable insights: collection, cleaning, exploration, modeling, visualization, decision-making, and impact.",
     },
     {
       id: "copy",
@@ -151,6 +157,7 @@ const Services = () => {
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
       ),
+      text: "Copywriting blends persuasion and clarity: headlines, storytelling, audience needs, tone, structure, SEO, and compelling calls-to-action.",
     },
     {
       id: "security",
@@ -170,6 +177,7 @@ const Services = () => {
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
         </svg>
       ),
+      text: "Cyber security protects data and systems: risk assessment, defenses, detection, response, resilience, privacy, and continuous improvement.",
     },
     {
       id: "software",
@@ -191,6 +199,7 @@ const Services = () => {
           <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path>
         </svg>
       ),
+      text: "Software engineering designs, builds, and maintains reliable systems: requirements, architecture, code quality, testing, deployment, and collaboration.",
     },
   ];
 
@@ -208,7 +217,7 @@ const Services = () => {
           >
             SERVICES
           </p>
-          <h1 className="text-[#0779E4] font-bold text-sm">
+          <h1 className="text-[#0779E4] font-bold">
             This is My Expertise, The <br />
             Services I'll Provide My Clients
           </h1>
@@ -221,6 +230,7 @@ const Services = () => {
               title={service.title}
               id={service.id}
               icon={service.icon}
+              text={service.text}
             />
           ))}
         </div>
