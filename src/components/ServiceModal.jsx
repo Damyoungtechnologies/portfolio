@@ -90,7 +90,10 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           >
             {title} Portfolio
           </h2>
-          <button onClick={onClose} className="close-button">
+          <button
+            onClick={onClose}
+            className="close-button !border-0 !outline-none"
+          >
             &times;
           </button>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 // import "../App.css";
 // import { herobackground } from "../assets";
 const Hero = () => {
@@ -10,7 +11,20 @@ const Hero = () => {
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
             I am Samuel Ayodeji
           </h1>
-          <h1 className="text-[4rem] font-light">I love Innovation</h1>
+          <h1 className="text-[4rem] font-light flex gap-2">
+            I love{"  "}
+            <span>
+              <Typewriter
+                options={{
+                  strings: ["Innovation", "Science", "Technology"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                  deleteSpeed: 50,
+                }}
+              />
+            </span>
+          </h1>
           <p style={{ margin: "30px 0 50px", fontSize: "18px" }}>
             Passionate about science, tech, and leadership, inspiring progress.
           </p>
