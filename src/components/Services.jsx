@@ -217,10 +217,7 @@ const Services = () => {
           >
             SERVICES
           </p>
-          <h1 className="text-[#0779E4] font-bold">
-            This is My Expertise, The <br />
-            Services I'll Provide My Clients
-          </h1>
+          <h1 className="text-[#0779E4] font-bold">View my works</h1>
         </div>
 
         <div className="services-grid">

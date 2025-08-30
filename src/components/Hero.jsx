@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { cv } from "../assets";
 // import "../App.css";
 // import { herobackground } from "../assets";
 const Hero = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
             I am Samuel Ayodeji
           </h1>
-          <h1 className="text-[4rem] font-light flex gap-2">
+          <h1 className="text-[2rem] font-light flex gap-2">
             I love{"  "}
             <span>
               <Typewriter
@@ -37,7 +38,8 @@ const Hero = () => {
             }}
           >
             <a
-              href="#contact"
+              href={cv}
+              download
               style={{
                 backgroundColor: "#0779e4",
                 color: "white",
@@ -57,7 +59,7 @@ const Hero = () => {
                 e.target.style.backgroundColor = "#0779e4";
               }}
             >
-              Hire me
+              Download CV
               <span style={{ marginLeft: "5px" }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +75,7 @@ const Hero = () => {
               </span>
             </a>
             <a
-              href="#portfolio"
+              href="#services"
               style={{
                 backgroundColor: "white",
                 color: "#0779e4",

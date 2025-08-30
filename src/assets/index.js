@@ -7,3 +7,4 @@ export { default as port4 } from "./images/port4.webp";
 export { default as port5 } from "./images/port5.webp";
 export { default as port6 } from "./images/port6.webp";
 export { default as whatsapp } from "./images/whatsapp_scan_code.png";
+export { default as cv } from "./my_cv.pdf";
