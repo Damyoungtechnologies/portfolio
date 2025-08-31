@@ -6,13 +6,13 @@ import { cv } from "../assets";
 const Hero = () => {
   return (
     <section id="" className="hero">
-      <div className="flex w-[98%] md:w-[90%] items-center mt-16 md:mt-32 mx-auto">
+      <div className="flex w-[100%] md:w-[90%] items-center mt-16 md:mt-32 mx-auto">
         <div className="hero-content">
           <h3 className="there">Hi There!</h3>
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
             I am Samuel Ayodeji
           </h1>
-          <h1 className="text-[2rem] font-light flex gap-2">
+          <h2 className="text-[1rem] font-light flex gap-2">
             I love{"  "}
             <span>
               <Typewriter
@@ -25,7 +25,7 @@ const Hero = () => {
                 }}
               />
             </span>
-          </h1>
+          </h2>
           <p style={{ margin: "30px 0 50px", fontSize: "18px" }}>
             Passionate about science, tech, and leadership, inspiring progress.
           </p>

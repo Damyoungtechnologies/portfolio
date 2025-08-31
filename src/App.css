@@ -129,7 +129,7 @@
 /* Hero section */
 .hero {
   background-image: url("./assets/images/heropage_background.png");
-  background-color: red;
+  /* background-color: red; */
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -414,4 +414,10 @@
 .btn-outline:hover {
   background: #0779e4;
   color: white;
+}
+@media only screen and (max-width: 900px) {
+  .hero {
+    height: 90vh;
+    display: none !important;
+  }
 }
