@@ -12,7 +12,7 @@ const Hero = () => {
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
             I am Samuel Ayodeji
           </h1>
-          <h2 className="text-2xl md:text-4xl font-light flex gap-2">
+          <h2 className="text-3xl md:text-4xl font-light flex gap-2">
             I love{"  "}
             <span>
               <Typewriter
