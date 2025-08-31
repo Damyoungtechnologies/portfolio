@@ -292,6 +292,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       case "image":
         return (
           <img
+            loading="easy"
             src={work.src}
             alt={work.title}
             style={{
