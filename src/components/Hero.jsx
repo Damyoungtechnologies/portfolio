@@ -12,7 +12,7 @@ const Hero = () => {
           <h1 className="text-[4rem] font-medium text-l md:text-xl lg:text-2xl mt-[15px]">
             I am Samuel Ayodeji
           </h1>
-          <h2 className="text-[1rem] font-light flex gap-2">
+          <h1 className="text-[2rem] font-light flex gap-2">
             I love{"  "}
             <span>
               <Typewriter
@@ -25,7 +25,7 @@ const Hero = () => {
                 }}
               />
             </span>
-          </h2>
+          </h1>
           <p style={{ margin: "30px 0 50px", fontSize: "18px" }}>
             Passionate about science, tech, and leadership, inspiring progress.
           </p>
