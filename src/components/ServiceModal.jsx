@@ -2,6 +2,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "../servicemodal.css";
+import { damtasker, shinystars } from "../assets";
 
 const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,23 +78,23 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       graphic: [
         {
           id: 1,
-          title: "Brand Identity Design",
+          title: "Damtasker Brand Logo",
           description:
-            "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup company.",
-          type: "image",
-          src: "/images/graphic/brand-identity.jpg",
-          link: "https://behance.net/your-project",
-          tags: ["Branding", "Logo Design", "Identity"],
+            "Damtasker task prioritizer app is a web app that uses Eisen Hower 4-quadrant method to prioritize tasks and enables users to manage their schedules efficiently.",
+          type: "video",
+          src: damtasker,
+          link: "https://www.canva.com/design/DAGYIzJYMkc/bYhGT8U-yyTJXxzJsTbrtw/edit?utm_content=DAGYIzJYMkc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+          tags: ["Branding", "Logo Design", "Coreldraw", "Canva"],
         },
         {
           id: 2,
-          title: "Marketing Campaign Assets",
+          title: "E-flyer design",
           description:
-            "A collection of marketing materials including social media graphics, print advertisements, and digital banners for a product launch.",
+            "My e-flyers and e-banners design projects are on my facebook page. Visit the link below to explore them.",
           type: "image",
-          src: "/images/graphic/marketing-campaign.jpg",
-          link: "https://behance.net/your-campaign",
-          tags: ["Marketing", "Social Media", "Print Design"],
+          src: shinystars,
+          link: "https://www.facebook.com/share/1AXpk5nNp2/",
+          tags: ["Coreldraw", "Leonardo AI", "Print Design"],
         },
       ],
       scratch: [
@@ -310,12 +311,14 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
         return (
           <video
             controls
+            autoPlay
             style={{
               width: "100%",
               height: "auto",
               borderRadius: "8px",
               boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
             }}
+            src={work.src}
           >
             <source src={work.src} type="video/mp4" />
             <p>Your browser does not support the video tag.</p>
