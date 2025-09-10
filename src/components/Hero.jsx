@@ -6,6 +6,9 @@ import { cv } from "../assets";
 const Hero = () => {
   return (
     <section id="" className="hero">
+      <marquee behavior="" direction="" className="w-1/2 mx-auto">
+        This site is still undergoing development
+      </marquee>
       <div className="flex w-[100%] md:w-[90%] items-center mt-16 md:mt-32 mx-auto">
         <div className="hero-content">
           <h3 className="there">Hi There!</h3>
