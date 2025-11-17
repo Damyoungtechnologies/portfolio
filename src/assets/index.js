@@ -10,3 +10,4 @@ export { default as whatsapp } from "./images/whatsapp_scan_code.png";
 export { default as cv } from "./my_cv.pdf";
 export { default as damtasker } from "./damtasker_logo.mp4";
 export { default as shinystars } from "./images/shinystars.jpg";
+export { default as phish } from "./images/phish.png";

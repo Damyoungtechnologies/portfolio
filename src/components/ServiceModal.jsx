@@ -100,45 +100,105 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       scratch: [
         {
           id: 1,
-          title: "Interactive Story Game",
+          title: "Cat-Bat Flight",
           description:
-            "An educational interactive story game that teaches kids about environmental conservation through engaging gameplay and colorful characters.",
-          type: "website",
-          src: "https://scratch.mit.edu/projects/your-project-id",
-          link: "https://scratch.mit.edu/projects/your-project-id",
-          tags: ["Education", "Interactive Story", "Environment"],
+            "An educational interactive story game that teaches kids about partnership with good company of friend could help one to reach one's destination on time.",
+          type: "iframe",
+          src: "https://scratch.mit.edu/projects/1243740440/embed",
+          link: "https://scratch.mit.edu/projects/1243740440",
+          tags: ["Education", "Interactive Story", "Animation"],
         },
         {
           id: 2,
-          title: "Math Learning Game",
+          title: "Platformer Game",
           description:
-            "A fun math learning game that helps children practice arithmetic operations through gamification and reward systems.",
-          type: "video",
-          src: "/videos/scratch/math-game-demo.mp4",
-          link: "https://scratch.mit.edu/projects/your-math-game",
-          tags: ["Education", "Math", "Gamification"],
+            "An educational interactive story game that teaches kids about how to be be security conscious by avoiding the enemies",
+          type: "iframe",
+          src: "https://scratch.mit.edu/projects/1243755813/embed",
+          link: "https://scratch.mit.edu/projects/1243755813",
+          tags: ["Education", "Interactive Game", "Security"],
+        },
+        {
+          id: 3,
+          title: "United Nations SDGs",
+          description:
+            "An educational interactive story game that teaches kids about environmental and climate action which can help to cure environmental degradation issues.",
+          type: "iframe",
+          src: "https://scratch.mit.edu/projects/1243770115/embed",
+          link: "https://scratch.mit.edu/projects/1243770115",
+          tags: ["Education", "Interactive Story", "Environment"],
+        },
+        {
+          id: 4,
+          title: "Shark-Diver Game",
+          description:
+            "An educational interactive game of divers swimming in the ocean to avoid a hungry shark",
+          type: "iframe",
+          src: "https://scratch.mit.edu/projects/1243778025/embed",
+          link: "https://scratch.mit.edu/projects/1243778025",
+          tags: ["Education", "Interactive Game", "Security"],
+        },
+        {
+          id: 5,
+          title: "Magical Adventure",
+          description:
+            "An educational interactive story about magical adventure in an icy dark cave",
+          type: "iframe",
+          src: "https://www.youtube.com/embed/_AEHj_2KtD0?si=iLBdbXH9kYoyxtpd",
+          link: "https://youtu.be/_AEHj_2KtD0?si=gvdP_feuzz5t8jKL",
+          tags: ["Education", "Interactive Game", "Fun"],
         },
       ],
       video: [
         {
           id: 1,
-          title: "Corporate Brand Video",
+          title: "Hope in Tembien",
           description:
-            "A professional brand video showcasing company values and services with motion graphics, color correction, and professional audio mixing.",
-          type: "video",
-          src: "/videos/editing/corporate-brand.mp4",
-          link: "https://vimeo.com/your-video",
-          tags: ["Corporate", "Branding", "Motion Graphics"],
+            "Created and edited the 3D AI animation video on UN SDGs as a requirement for the SDG4Kids Muna Animation competition. The animation story was about the Ethiotrees program that ameliorated the desertification chaos that plagued Tembien in Ethiopia.",
+          type: "iframe",
+          src: "https://www.youtube.com/embed/mqDtlQx8wMo?si=KIbv_6EW7dAuaERB",
+          link: "https://youtu.be/mqDtlQx8wMo?si=E2mqf7DPOjZf33Ho",
+          tags: [
+            "United Nations",
+            "Sustainable Development Goals",
+            "Desertification",
+            "Bioconservation",
+          ],
         },
         {
           id: 2,
-          title: "Event Highlight Reel",
+          title: "Self Introduction",
+          description: "This video displays my area of competencies and skills",
+          type: "iframe",
+          src: "https://www.youtube.com/embed/SrM6BGdi5JQ?si=u4fDM5Z5IKwcuWAC",
+          link: "https://youtu.be/SrM6BGdi5JQ?si=u4fDM5Z5IKwcuWAC",
+          tags: ["Skills", "Suma Cum Laude", "Multitalented"],
+        },
+        {
+          id: 3,
+          title: "Leadership Training",
           description:
-            "A dynamic highlight reel from a tech conference featuring multiple camera angles, smooth transitions, and synchronized audio.",
-          type: "video",
-          src: "/videos/editing/event-highlights.mp4",
-          link: "https://youtube.com/watch?v=your-event-video",
-          tags: ["Event", "Multi-camera", "Highlights"],
+            "Leadership training session at G-Eden Nursery and Primary School under the umbrella of NextGen Leadership Network",
+          type: "iframe",
+          src: "https://www.youtube.com/embed/ZqQm6d_RKNo?si=QaCfbJ-bPvKtqLzP",
+          link: "https://youtu.be/ZqQm6d_RKNo?si=AQ5vgsf9XhOrci1T",
+          tags: ["Leadership", "Nation Building", "Paradigm Shift"],
+        },
+
+        {
+          id: 4,
+          title: "Train the trainer experience",
+          description:
+            "The video answers few question about my experience during the training the trainer field experience",
+          type: "iframe",
+          src: "https://www.youtube.com/embed/RZa8ec7vVh0?si=prSRLPdqdj6_h0tA",
+          link: "https://youtu.be/RZa8ec7vVh0?si=Cvh93-wvmuBzbpzw",
+          tags: [
+            "Service Leadership",
+            "Ethical Leadership",
+            "Personal Leadership",
+            "Democratic Leadership",
+          ],
         },
       ],
       data: [
@@ -166,23 +226,28 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       copy: [
         {
           id: 1,
-          title: "Website Copy Portfolio",
+          title: "Review on Biotechnology and Genetic Engineering",
           description:
-            "Collection of website copy samples including landing pages, product descriptions, and email campaigns that increased conversion rates by 30%.",
-          type: "website",
-          src: "https://your-copy-portfolio.com",
-          link: "https://your-copy-portfolio.com",
-          tags: ["Web Copy", "Conversion", "Landing Pages"],
+            "Biotechnology and genetic engineering empower medicine, agriculture, and industry with precision. Innovations promise disease cures, resilient crops, and sustainable solutions.",
+          type: "iframe",
+          src: "https://www.youtube.com/embed/cWEo8ysGDKY?si=LXwCRRhS1bL6SPBX",
+          link: "https://youtu.be/cWEo8ysGDKY?si=SUfTLkIOvs2Z3S-O",
+          tags: ["Academic Research", "Presentation", "Biotechnology", "GMO"],
         },
         {
           id: 2,
-          title: "Content Strategy Case Study",
+          title: "Research and Presentation of Cybersecurity Project",
           description:
-            "Detailed case study showing content strategy development and implementation for a SaaS company, including content calendar and performance metrics.",
+            "Detailed case study of Incident Response Playbooks (Phishing, Ransomware), Building a Secure Small Network, Applying Cryptography in Real-World Scenarios and Demonstrating FTP versus SFTP Security",
           type: "image",
-          src: "/images/copy/content-strategy.jpg",
-          link: "https://your-case-study.com",
-          tags: ["Strategy", "SaaS", "Content Marketing"],
+          src: "src/assets/images/phish.png",
+          link: "https://drive.google.com/drive/folders/1UIWa3Q5h8pfC7JUPmdf80TnFyWw8tmPf",
+          tags: [
+            "Cyber Security",
+            "Encryption",
+            "Social engineering",
+            "Network segmentation",
+          ],
         },
       ],
       security: [
@@ -214,13 +279,13 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       software: [
         {
           id: 1,
-          title: "Full-Stack Web Application",
+          title: "Task-prioritizer Web Application",
           description:
-            "Enterprise-level web application built with modern technologies including microservices architecture, automated testing, and CI/CD pipeline.",
+            "Damtasker is a web application that allows users to set their daily tasks in the order of priority",
           type: "website",
-          src: "https://your-app-demo.com",
-          link: "https://github.com/your-enterprise-app",
-          tags: ["Full-Stack", "Microservices", "Enterprise"],
+          src: "https://damtasker.onrender.com/register",
+          link: "https://damtasker.onrender.com/register",
+          tags: ["React", "Firebase", "Web App", "Eisen Hower Quadrant"],
         },
         {
           id: 2,
@@ -311,8 +376,8 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       case "video":
         return (
           <video
-            controls
-            autoPlay
+            controls={true}
+            autoPlay={true}
             style={{
               width: "100%",
               height: "auto",
@@ -340,6 +405,27 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                 boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
               }}
               sandbox="allow-scripts allow-same-origin"
+            />
+          </div>
+        );
+
+      case "iframe":
+        return (
+          <div style={{ position: "relative", width: "100%", height: "402px" }}>
+            <iframe
+              src={work.src}
+              title={work.title}
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              }}
+              allowTransparency="true"
+              frameBorder="0"
+              scrolling="no"
+              allowFullScreen
             />
           </div>
         );
@@ -462,6 +548,8 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                             ? "#fff0f6"
                             : currentWork.type === "website"
                             ? "#f6ffed"
+                            : currentWork.type === "iframe"
+                            ? "#f9f0ff"
                             : "#f0f0f0",
                         color:
                           currentWork.type === "image"
@@ -470,6 +558,8 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                             ? "#eb2f96"
                             : currentWork.type === "website"
                             ? "#52c41a"
+                            : currentWork.type === "iframe"
+                            ? "#722ed1"
                             : "#666",
                         fontSize: "14px",
                         fontWeight: "500",
@@ -508,6 +598,8 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                       ? "Visit Site"
                       : currentWork.type === "video"
                       ? "Watch Full Video"
+                      : currentWork.type === "iframe"
+                      ? "Play Game"
                       : "View Project"}
                   </a>
                 </div>
