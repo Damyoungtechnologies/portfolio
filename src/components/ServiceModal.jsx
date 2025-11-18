@@ -253,16 +253,19 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       security: [
         {
           id: 1,
-          title: "Security Audit Report",
+          title:
+            "Digital Forensics Investigation Report: Organized Cryptocurrency Fraud Network Case",
           description:
-            "Comprehensive security audit documentation for a financial services company, including vulnerability assessment and remediation recommendations.",
+            "A forensic analysis of an Android Image confirms that a primary suspect named Sam orchestrated a transnational cryptocurrency fraud scheme.",
           type: "image",
-          src: "/images/security/audit-report.jpg",
-          link: "https://your-security-portfolio.com",
+          src: "src/assets/images/digital_forensic.png",
+          link: "https://drive.google.com/file/d/1-w5MAqqvBUZKCqmNhgbXtfbO2hSkgxAO/view?usp=drive_link",
           tags: [
             "Security Audit",
-            "Vulnerability Assessment",
-            "Financial Services",
+            "Digital Forensics",
+            "Autopsy",
+            "Android Image",
+            "Chain of Custody",
           ],
         },
         {
@@ -281,31 +284,11 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           id: 1,
           title: "Task-prioritizer Web Application",
           description:
-            "Damtasker is a web application that allows users to set their daily tasks in the order of priority",
+            "Damtasker is a web application that allows users to set their daily tasks in the order of priority according to Eisen Hower's Quadrant method.",
           type: "website",
-          src: "https://damtasker.onrender.com/register",
-          link: "https://damtasker.onrender.com/register",
+          src: "https://damtasker.onrender.com/",
+          link: "https://damtasker.onrender.com/",
           tags: ["React", "Firebase", "Web App", "Eisen Hower Quadrant"],
-        },
-        {
-          id: 2,
-          title: "Mobile App Development",
-          description:
-            "Cross-platform mobile application with offline capabilities, push notifications, and seamless user experience across iOS and Android.",
-          type: "video",
-          src: "/videos/software/mobile-app-demo.mp4",
-          link: "https://play.google.com/store/apps/your-app",
-          tags: ["Mobile", "Cross-platform", "React Native"],
-        },
-        {
-          id: 3,
-          title: "API Documentation",
-          description:
-            "Comprehensive API documentation and integration examples for a RESTful service with authentication and rate limiting.",
-          type: "image",
-          src: "/images/software/api-docs.jpg",
-          link: "https://your-api-docs.com",
-          tags: ["API", "Documentation", "REST"],
         },
       ],
     }),
