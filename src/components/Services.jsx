@@ -115,7 +115,7 @@ const Services = () => {
     },
     {
       id: "data",
-      title: "Data Analytics",
+      title: "Data Science",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ const Services = () => {
           <line x1="6" y1="20" x2="6" y2="14"></line>
         </svg>
       ),
-      text: "Data analytics turns raw information into actionable insights: collection, cleaning, exploration, modeling, visualization, decision-making, and impact.",
+      text: "Data science converts raw data into actionable insights - collection, cleaning, exploration, modeling, visualization, interpretation, impact, informing decisions.",
     },
     {
       id: "copy",

@@ -204,13 +204,13 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       data: [
         {
           id: 1,
-          title: "Sales Analytics Dashboard",
+          title: "Churn Prediction Model for a Bank",
           description:
-            "Interactive dashboard analyzing sales data with real-time visualizations, trend analysis, and predictive modeling using Python and Tableau.",
-          type: "website",
-          src: "https://your-dashboard-demo.com/sales",
-          link: "https://github.com/your-analytics-repo",
-          tags: ["Python", "Tableau", "Sales Analytics"],
+            "This project analyzes customer data to predict churn, identifying key factors influencing customer retention using various machine learning models.",
+          type: "html",
+          src: "/samuel_ayodeji_churn_analysis.html",
+          link: "/samuel_ayodeji_churn_analysis.html",
+          tags: ["Python", "ML", "Supervised Learning"],
         },
         {
           id: 2,
@@ -501,6 +501,24 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           </div>
         );
 
+      case "html":
+        return (
+          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+            <iframe
+              src={work.src}
+              title={work.title}
+              style={{
+                width: "100%",
+                height: "100%",
+                border: "none",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              }}
+              sandbox="allow-scripts allow-same-origin"
+            />
+          </div>
+        );
+
       default:
         return (
           <div
@@ -621,6 +639,8 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                             ? "#f6ffed"
                             : currentWork.type === "iframe"
                             ? "#f9f0ff"
+                            : currentWork.type === "html"
+                            ? "#fff7e6"
                             : "#f0f0f0",
                         color:
                           currentWork.type === "image"
@@ -631,6 +651,8 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                             ? "#52c41a"
                             : currentWork.type === "iframe"
                             ? "#722ed1"
+                            : currentWork.type === "html"
+                            ? "#fa8c16"
                             : "#666",
                         fontSize: "14px",
                         fontWeight: "500",
