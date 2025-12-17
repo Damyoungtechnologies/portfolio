@@ -128,7 +128,7 @@
 }
 /* Hero section */
 .hero {
-  background-image: url("./assets/images/heropage_background.png");
+  background-image: url("/images/heropage_background.png");
   /* background-color: red; */
   background-size: cover;
   background-attachment: fixed;
@@ -205,7 +205,7 @@
 
 /* Counter section */
 .counter-section {
-  background-image: url("./assets/images/counter_bg.webp");
+  background-image: url("/images/counter_bg.webp");
   background-size: cover;
   background-position: center;
   position: relative;

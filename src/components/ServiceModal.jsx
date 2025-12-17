@@ -240,7 +240,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "Detailed case study of Incident Response Playbooks (Phishing, Ransomware), Building a Secure Small Network, Applying Cryptography in Real-World Scenarios and Demonstrating FTP versus SFTP Security",
           type: "image",
-          src: "src/assets/images/phish.png",
+          src: "/images/phish.png",
           link: "https://drive.google.com/drive/folders/1UIWa3Q5h8pfC7JUPmdf80TnFyWw8tmPf",
           tags: [
             "Cyber Security",
@@ -258,7 +258,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "A forensic analysis of an Android Image confirms that a primary suspect named Sam orchestrated a transnational cryptocurrency fraud scheme.",
           type: "image",
-          src: "src/assets/images/digital_forensic.png",
+          src: "/images/digital_forensic.png",
           link: "https://drive.google.com/file/d/1-w5MAqqvBUZKCqmNhgbXtfbO2hSkgxAO/view?usp=drive_link",
           tags: [
             "Security Audit",
@@ -274,7 +274,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "Web application security assessment of a Cooperative Management System Software - vulnerability hunt and necessary patch prognosis",
           type: "image",
-          src: "src/assets/images/vulnerability_assessment.png",
+          src: "/images/vulnerability_assessment.png",
           link: "https://drive.google.com/file/d/1YAglOQj1VQ-C5j6hDkF8gwnH9yPHd1SC/view?usp=sharing",
           tags: [
             "Ethical Hacking",
@@ -291,7 +291,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "Web application security assessment of a Cooperative Management System Software - vulnerability hunt and necessary patch prognosis",
           type: "image",
-          src: "src/assets/images/kali.png",
+          src: "/images/kali.png",
           link: "https://drive.google.com/file/d/1ojKenK_Wc7Z9p1D8gxxFm5CXvv-B5nrJ/view?usp=drive_link",
           tags: ["Kali", "Linux OS", "Virtualbox", "ICMP", "Network Security"],
         },
@@ -301,7 +301,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "Incident Response Playbook contains comprehensive Incident Response (IR) playbooks for three specific cybersecurity scenarios: phishing attacks, ransomware attacks, and insider threats.",
           type: "image",
-          src: "src/assets/images/playbook.png",
+          src: "/images/playbook.png",
           link: "https://docs.google.com/document/d/11pKERNcMC5nWpNcPhqHsTG5m7NQ0FlUqdoc7vksfRWg/edit?usp=drive_link",
           tags: [
             "Phishing",
@@ -318,7 +318,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "The design and security of a small network using a three-zone architecture (trusted internal LAN, untrusted guest LAN, and partially trusted DMZ) connected by a central firewall.",
           type: "image",
-          src: "src/assets/images/network.png",
+          src: "/images/network.png",
           link: "https://docs.google.com/document/d/1ug4CGou07n4xjw316iy2ofsuSobdpuMVhHYT45bE0F8/edit?usp=drive_link",
           tags: [
             "NMAP",
@@ -336,7 +336,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "The practical applications of various cryptographic techniques, including hands-on steps using OpenSSL for encryption, hashing, and digital signatures.",
           type: "image",
-          src: "src/assets/images/encrypt.png",
+          src: "/images/encrypt.png",
           link: "https://docs.google.com/document/d/1ghXGNwNM-hrcVxRd7xmLgKYtQamJosaA2sqiUSRf_qs/edit?usp=drive_link",
           tags: [
             "Encyption",
@@ -354,7 +354,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           description:
             "Demonstrating FTP vs. SFTP Security, provides a comparative analysis of the File Transfer Protocol (FTP) and the Secure File Transfer Protocol (SFTP), including setup instructions for demonstrating their security differences using tools like Wireshark",
           type: "image",
-          src: "src/assets/images/ftp_security.png",
+          src: "/images/ftp_security.png",
           link: "https://docs.google.com/document/d/1NqCfXzVhOJKBC6t51916CQ84c02rNy8X7bYRiH4scT8/edit?usp=drive_link",
           tags: [
             "Security",
