@@ -3,29 +3,29 @@ import React from "react";
 
 const Services = () => {
   const services = [
-    {
-      id: "uiux",
-      title: "UI & UX Design",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
-      ),
-      text: "UI/UX blends clarity and delight: intuitive interfaces, accessible flows, responsive design, visual hierarchy, feedback, consistency, iteration, empathy.",
-    },
+    // {
+    //   id: "uiux",
+    //   title: "UI & UX Design",
+    //   icon: (
+    //     <svg
+    //       xmlns="http://www.w3.org/2000/svg"
+    //       width="24"
+    //       height="24"
+    //       viewBox="0 0 24 24"
+    //       fill="none"
+    //       stroke="currentColor"
+    //       strokeWidth="2"
+    //       strokeLinecap="round"
+    //       strokeLinejoin="round"
+    //     >
+    //       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    //       <circle cx="9" cy="7" r="4"></circle>
+    //       <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+    //       <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    //     </svg>
+    //   ),
+    //   text: "UI/UX blends clarity and delight: intuitive interfaces, accessible flows, responsive design, visual hierarchy, feedback, consistency, iteration, empathy.",
+    // },
     {
       id: "webdev",
       title: "Web Development",
@@ -204,23 +204,19 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="services bg-[#fff]">
+    <section id="services" className="services bg-[#f8fafc] dark:bg-slate-900 py-24">
       <div className="w-[90%] mx-auto">
-        <div style={{ textAlign: "center", marginBottom: "50px" }}>
-          <p
-            style={{
-              color: "#0779e4",
-              fontWeight: "bold",
-              fontSize: "14px",
-              marginBottom: "15px",
-            }}
-          >
-            SERVICES
+        <div style={{ textAlign: "center", marginBottom: "60px" }}>
+          <span className="section-label">My Expertise</span>
+          <h1 className="gradient-text font-extrabold dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "3rem" }}>
+            Specialized Services
+          </h1>
+          <p className="mt-4 text-slate-500 dark:text-slate-400 max-w-[600px] margin-auto" style={{ margin: "1rem auto" }}>
+            Delivering high-performance digital solutions tailored to your unique requirements.
           </p>
-          <h1 className="text-[#0779E4] font-bold">View my works</h1>
         </div>
 
-        <div className="services-grid">
+        <div className="services-grid gap-10">
           {services.map((service) => (
             <ServiceCard
               key={service.id}
@@ -232,27 +228,19 @@ const Services = () => {
           ))}
         </div>
 
-        <div style={{ textAlign: "center", marginTop: "50px" }}>
-          <h4 style={{ color: "#666", fontSize: "18px" }}>
-            Have any works you want to done by me?{" "}
-            <a
-              href="#contact"
-              style={{ color: "#0779e4", textDecoration: "none" }}
-            >
-              Contact Me
-            </a>
-          </h4>
-          <p
-            style={{
-              color: "#666",
-              maxWidth: "700px",
-              margin: "20px auto 0",
-              lineHeight: "1.6",
-            }}
-          >
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
+        <div className="glass-card mt-24 p-12 text-center rounded-3xl premium-shadow max-w-4xl mx-auto !bg-slate-900/80 dark:!bg-slate-800/50">
+          <h2 className="!text-white" style={{ fontSize: "1.8rem", fontWeight: "800", marginBottom: "15px" }}>
+            Have a project in mind?
+          </h2>
+          <p className="!text-white/80" style={{ fontSize: "1.1rem", marginBottom: "30px", maxWidth: "600px", margin: "0 auto 30px" }}>
+            I'm currently available for freelance work and collaborations. Let's build something extraordinary together.
           </p>
+          <a
+            href="#contact"
+            className="!text-white inline-block px-10 py-4 bg-[#0779e4] text-white rounded-xl font-bold uppercase tracking-wider shadow-lg shadow-blue-500/20 hover:bg-[#0566c5] transition-all"
+          >
+            Contact Me Today
+          </a>
         </div>
       </div>
     </section>

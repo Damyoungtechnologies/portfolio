@@ -3,45 +3,35 @@ import React from "react";
 
 const Counter = () => {
   return (
-    <section className="counter-section">
-      <div className="w-[90%] mx-auto">
-        <div className="counter-container">
+    <section className="relative py-24 overflow-hidden bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url("/images/counter_bg.webp")' }}>
+      {/* Dynamic Overlay */}
+      <div className="absolute inset-0 bg-[#0779e4]/90 dark:bg-slate-950/95 z-0"></div>
+
+      {/* Decorative Blobs */}
+      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl z-0"></div>
+      <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl z-0"></div>
+
+      <div className="container w-[90%] mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           <CounterItem
-            count={3000}
-            label="HAPPY CUSTOMERS"
+            count={200}
+            label="Successful Projects"
             icon={
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 512 512">
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M234.667 42.667c41.237 0 74.667 33.429 74.667 74.666c0 39.863-31.238 72.43-70.57 74.556l-4.097.111C193.43 192 160 158.571 160 117.333c0-39.862 31.238-72.43 70.57-74.556zm-149.334 384h187.791A127.2 127.2 0 0 1 257.77 384H128v-34.133l.111-4.142c2.057-38.365 32.515-68.392 69.222-68.392H272l3.908.114c3.809.223 7.54.769 11.168 1.612a128.5 128.5 0 0 1 38.566-30.345c-15.93-8.956-34.208-14.047-53.642-14.047h-74.667l-4.616.096c-59.715 2.49-107.384 53.071-107.384 115.104zm117.334-309.334c0-17.673 14.327-32 32-32s32 14.327 32 32s-14.327 32-32 32s-32-14.327-32-32m118.636 331.629L384 410.667l62.697 38.295l-17.046-71.463l55.795-47.794l-73.232-5.871L384 256l-28.214 67.834l-73.232 5.871l55.795 47.794z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             }
           />
           <CounterItem
-            count={320}
-            label="PROJECTS COMPLETED"
+            count={100}
+            label="Satisfied Clients"
             icon={
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-                <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-                  <path d="M20.52 20.414c.308-.375.48-.884.48-1.414V7c0-.53-.172-1.04-.48-1.414C20.215 5.21 19.799 5 19.365 5h-8.981C8.659 5 8.325 3.269 6.827 3.026C6.563 2.983 6.289 3 6.022 3c-.953 0-1.429 0-1.804.159a2 2 0 0 0-1.059 1.06C3 4.592 3 5.068 3 6.021V19c0 .53.172 1.04.48 1.414c.306.375.722.586 1.156.586h14.728c.434 0 .85-.21 1.157-.586M16 3h3" />
-                  <path d="M13.5 17a4 4 0 1 0 0-8a4 4 0 0 0 0 8" />
-                </g>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             }
           />
           <CounterItem
-            count={1000}
-            label="CUPS OF COFFEE"
+            count={10}
+            label="Innovation Awards"
             icon={
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024">
-                <path
-                  fill="currentColor"
-                  d="M822.592 192h14.272a32 32 0 0 1 31.616 26.752l21.312 128A32 32 0 0 1 858.24 384h-49.344l-39.04 546.304A32 32 0 0 1 737.92 960H285.824a32 32 0 0 1-32-29.696L214.912 384H165.76a32 32 0 0 1-31.552-37.248l21.312-128A32 32 0 0 1 187.136 192h14.016l-6.72-93.696A32 32 0 0 1 226.368 64h571.008a32 32 0 0 1 31.936 34.304zm-64.128 0l4.544-64H260.736l4.544 64zm-548.16 128H820.48l-10.688-64H214.208l-10.688 64zm68.736 64l36.544 512H708.16l36.544-512z"
-                />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
             }
           />
         </div>

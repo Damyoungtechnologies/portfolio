@@ -9,75 +9,39 @@ const ServiceCard = ({ title, id, icon, text }) => {
 
   return (
     <>
-      <div className="service-card">
-        <span
-          className="service-logo"
-          style={{
-            position: "relative",
-            display: "inline-block",
-            marginBottom: "15px",
-            backgroundColor: "#0779e4",
-            padding: "15px",
-            borderRadius: "5px",
-            color: "white",
-          }}
-        >
+      <div className="service-card glass-card p-8 rounded-3xl smooth-transition hover:-translate-y-2 border border-slate-100 dark:border-white/5 flex flex-col h-full dark:!bg-slate-900/40">
+        <div className="w-16 h-16 bg-blue-50 dark:bg-slate-800 text-[#0779e4] dark:text-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
           {icon}
-        </span>
-        <div className="service-details">
-          <h1
-            style={{
-              fontSize: "1.5rem",
-              fontWeight: "bold",
-              color: "#0779e4",
-              marginBottom: "10px",
-            }}
-          >
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-[#0779e4] transition-colors">
             {title}
-          </h1>
-          <p
-            style={{
-              color: "#666",
-              margin: "15px 0",
-              lineHeight: "1.6",
-            }}
-          >
+          </h3>
+          <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
             {text}
           </p>
         </div>
         <button
           onClick={() => setIsModalOpen(true)}
-          style={{
-            background: "none",
-            border: "none",
-            color: "#0779e4",
-            display: "flex",
-            alignItems: "center",
-            cursor: "pointer",
-            padding: "0",
-            fontSize: "16px",
-          }}
-          onMouseOver={(e) => {
-            e.target.style.textDecoration = "underline";
-          }}
-          onMouseOut={(e) => {
-            e.target.style.textDecoration = "none";
-          }}
+          className="flex items-center !border-0 !outline-none !bg-transparent gap-2 text-[#0779e4] dark:text-blue-400 font-bold group w-fit hover:gap-3 transition-all"
         >
-          Discover
-          <span style={{ marginLeft: "5px" }}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M14 16.94v-4H5.08l-.03-2.01H14V6.94l5 5Z"
-              />
-            </svg>
-          </span>
+          Explore Portfolio
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            className="group-hover:translate-x-1 transition-transform"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
         </button>
       </div>
 

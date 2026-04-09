@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 import { useEffect, useState } from "react";
 import "../servicemodal.css";
-import { damtasker, shinystars } from "../assets";
+import { damtasker, micokiki } from "../assets";
 
 const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,11 +89,11 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           id: 2,
           title: "E-flyer design",
           description:
-            "My e-flyers and e-banners design projects are on my facebook page. Visit the link below to explore them.",
+            "My Branding projects and e-flyer projects are on my facebook page. Visit the link below to explore them.",
           type: "image",
-          src: shinystars,
-          link: "https://www.facebook.com/share/1AXpk5nNp2/",
-          tags: ["Coreldraw", "Leonardo AI", "Print Design"],
+          src: micokiki,
+          link: "https://www.facebook.com/share/18opJw5rXx/",
+          tags: ["Coreldraw", "Gemini AI", "Print Design"],
         },
       ],
       scratch: [
@@ -424,22 +423,18 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
   };
 
   const renderContent = (work) => {
+    const commonClasses = "w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover";
+    
     switch (work.type) {
       case "image":
         return (
           <img
-            loading="easy"
+            loading="lazy"
             src={work.src}
             alt={work.title}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-            }}
+            className={commonClasses}
             onError={(e) => {
-              e.target.src =
-                "/placeholder.svg?height=400&width=600&text=Image+Not+Found";
+              e.target.src = "https://placehold.co/600x400/0f172a/white?text=Image+Not+Found";
             }}
           />
         );
@@ -447,14 +442,9 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
       case "video":
         return (
           <video
-            controls={true}
-            autoPlay={true}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-            }}
+            controls
+            autoPlay
+            className={commonClasses}
             src={work.src}
           >
             <source src={work.src} type="video/mp4" />
@@ -463,76 +453,25 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
         );
 
       case "website":
-        return (
-          <div style={{ position: "relative", width: "100%", height: "400px" }}>
-            <iframe
-              src={work.src}
-              title={work.title}
-              style={{
-                width: "100%",
-                height: "100%",
-                border: "none",
-                borderRadius: "8px",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-              }}
-              sandbox="allow-scripts allow-same-origin"
-            />
-          </div>
-        );
-
       case "iframe":
-        return (
-          <div style={{ position: "relative", width: "100%", height: "402px" }}>
-            <iframe
-              src={work.src}
-              title={work.title}
-              style={{
-                width: "100%",
-                height: "100%",
-                border: "none",
-                borderRadius: "8px",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-              }}
-              allowTransparency="true"
-              frameBorder="0"
-              scrolling="no"
-              allowFullScreen
-            />
-          </div>
-        );
-
       case "html":
         return (
-          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+          <div className="relative w-full aspect-video md:h-[450px]">
             <iframe
               src={work.src}
               title={work.title}
-              style={{
-                width: "100%",
-                height: "100%",
-                border: "none",
-                borderRadius: "8px",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-              }}
-              sandbox="allow-scripts allow-same-origin"
+              className="w-full h-full border-0 rounded-2xl shadow-2xl bg-slate-900"
+              allowTransparency="true"
+              allowFullScreen
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-popups"
             />
           </div>
         );
 
       default:
         return (
-          <div
-            style={{
-              width: "100%",
-              height: "300px",
-              backgroundColor: "#f5f5f5",
-              borderRadius: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#666",
-            }}
-          >
+          <div className="w-full h-[300px] bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center text-slate-500">
             <p>Content type not supported</p>
           </div>
         );
@@ -544,156 +483,86 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
   const currentWork = works[currentIndex];
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content modal-animation">
+    <div className="modal-overlay" onClick={onClose}>
+      <div 
+        className="modal-content modal-animation group/modal" 
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal-header">
-          <h2
-            style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#0779e4" }}
-          >
-            {title} Portfolio
-          </h2>
+          <div className="flex flex-col">
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 mb-1">Portfolio</span>
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">
+              {title}
+            </h2>
+          </div>
           <button
             onClick={onClose}
             className="close-button"
-            style={{
-              background: "none",
-              border: "none",
-              fontSize: "16px",
-              cursor: "pointer",
-              color: "#666",
-            }}
+            aria-label="Close modal"
           >
-            &times;
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+            </svg>
           </button>
         </div>
 
         <div className="modal-body">
           {currentWork && (
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
-            >
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-                {/* Content Display Area */}
-                <div style={{ flex: "1 1 400px" }}>
-                  {renderContent(currentWork)}
+            <div className="flex flex-col lg:flex-row gap-10 items-start">
+              {/* Content Display Area */}
+              <div className="w-full lg:w-[60%] project-display group/display relative">
+                {renderContent(currentWork)}
+                <div className="absolute top-4 right-4 z-10">
+                  <span className={`type-indicator ${
+                    currentWork.type === "image" ? "bg-blue-500/20 text-blue-400 border border-blue-500/30" :
+                    currentWork.type === "video" ? "bg-rose-500/20 text-rose-400 border border-rose-500/30" :
+                    currentWork.type === "website" ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" :
+                    "bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                  } backdrop-blur-md`}>
+                    {currentWork.type}
+                  </span>
                 </div>
+              </div>
 
-                {/* Project Details */}
-                <div style={{ flex: "1 1 300px" }}>
-                  <h3
-                    style={{
-                      fontSize: "1.5rem",
-                      fontWeight: "bold",
-                      marginBottom: "10px",
-                      color: "#333",
-                    }}
-                  >
+              {/* Project Details */}
+              <div className="w-full lg:w-[40%] flex flex-col h-full">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-extrabold text-slate-800 dark:text-slate-100 mb-4 tracking-tight">
                     {currentWork.title}
                   </h3>
-
-                  <p
-                    style={{
-                      color: "#666",
-                      marginBottom: "20px",
-                      lineHeight: "1.6",
-                    }}
-                  >
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">
                     {currentWork.description}
                   </p>
+                </div>
 
-                  {/* Tags */}
-                  {currentWork.tags && (
-                    <div style={{ marginBottom: "20px" }}>
-                      {currentWork.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          style={{
-                            display: "inline-block",
-                            backgroundColor: "#f0f8ff",
-                            color: "#0779e4",
-                            fontSize: "12px",
-                            fontWeight: "500",
-                            padding: "4px 8px",
-                            borderRadius: "4px",
-                            marginRight: "8px",
-                            marginBottom: "8px",
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Content Type Indicator */}
-                  <div style={{ marginBottom: "20px" }}>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        backgroundColor:
-                          currentWork.type === "image"
-                            ? "#e6f7ff"
-                            : currentWork.type === "video"
-                            ? "#fff0f6"
-                            : currentWork.type === "website"
-                            ? "#f6ffed"
-                            : currentWork.type === "iframe"
-                            ? "#f9f0ff"
-                            : currentWork.type === "html"
-                            ? "#fff7e6"
-                            : "#f0f0f0",
-                        color:
-                          currentWork.type === "image"
-                            ? "#0779e4"
-                            : currentWork.type === "video"
-                            ? "#eb2f96"
-                            : currentWork.type === "website"
-                            ? "#52c41a"
-                            : currentWork.type === "iframe"
-                            ? "#722ed1"
-                            : currentWork.type === "html"
-                            ? "#fa8c16"
-                            : "#666",
-                        fontSize: "14px",
-                        fontWeight: "500",
-                        padding: "6px 12px",
-                        borderRadius: "6px",
-                        textTransform: "capitalize",
-                      }}
-                    >
-                      {currentWork.type}
-                    </span>
+                {/* Tags */}
+                {currentWork.tags && (
+                  <div className="flex flex-wrap gap-2 mb-10">
+                    {currentWork.tags.map((tag, index) => (
+                      <span key={index} className="tag-badge">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
+                )}
 
+                <div className="mt-auto">
                   {/* Action Button */}
                   <a
                     href={currentWork.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: "inline-block",
-                      backgroundColor: "#0779e4",
-                      color: "white",
-                      padding: "12px 24px",
-                      borderRadius: "6px",
-                      textDecoration: "none",
-                      fontWeight: "500",
-                      transition: "background-color 0.3s ease",
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = "#0566c5";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = "#0779e4";
-                    }}
+                    className="group relative inline-flex items-center justify-center gap-3 w-full py-4 px-6 bg-[#0779e4] !text-white font-black text-sm uppercase tracking-widest rounded-xl shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:bg-[#0566c5] hover:translate-y-[-2px] transition-all duration-300"
                   >
-                    {currentWork.type === "website"
-                      ? "Visit Site"
-                      : currentWork.type === "video"
-                      ? "Watch Full Video"
-                      : currentWork.type === "iframe"
-                      ? "Play Game"
-                      : "View Project"}
+                    <span>
+                      {currentWork.type === "website" ? "Visit Live Site" : 
+                       currentWork.type === "video" ? "Watch Showcase" : 
+                       currentWork.type === "iframe" ? "Launch Interactive" : 
+                       "View Full Details"}
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                      <path d="M5 12h14m-7-7 7 7-7 7"/>
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -706,96 +575,33 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           <button
             onClick={prevSlide}
             disabled={works.length <= 1}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              backgroundColor: works.length <= 1 ? "#f5f5f5" : "#f0f0f0",
-              border: "none",
-              padding: "10px 16px",
-              borderRadius: "6px",
-              cursor: works.length <= 1 ? "not-allowed" : "pointer",
-              transition: "background-color 0.3s ease",
-              color: works.length <= 1 ? "#ccc" : "#333",
-            }}
-            onMouseOver={(e) => {
-              if (works.length > 1) {
-                e.target.style.backgroundColor = "#e0e0e0";
-              }
-            }}
-            onMouseOut={(e) => {
-              if (works.length > 1) {
-                e.target.style.backgroundColor = "#f0f0f0";
-              }
-            }}
+            className="nav-btn"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ marginRight: "6px" }}
-            >
-              <path d="M15 18l-6-6 6-6" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m15 18-6-6 6-6"/>
             </svg>
-            Previous
+            <span>Previous</span>
           </button>
 
-          <div
-            style={{
-              fontSize: "14px",
-              color: "#666",
-              padding: "0 20px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            {currentIndex + 1} of {works.length}
+          <div className="dot-container">
+            {works.map((_, i) => (
+              <div 
+                key={i} 
+                className={`dot ${i === currentIndex ? "active" : ""}`}
+                onClick={() => setCurrentIndex(i)}
+                style={{ cursor: "pointer" }}
+              />
+            ))}
           </div>
 
           <button
             onClick={nextSlide}
             disabled={works.length <= 1}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              backgroundColor: works.length <= 1 ? "#f5f5f5" : "#f0f0f0",
-              border: "none",
-              padding: "10px 16px",
-              borderRadius: "6px",
-              cursor: works.length <= 1 ? "not-allowed" : "pointer",
-              transition: "background-color 0.3s ease",
-              color: works.length <= 1 ? "#ccc" : "#333",
-            }}
-            onMouseOver={(e) => {
-              if (works.length > 1) {
-                e.target.style.backgroundColor = "#e0e0e0";
-              }
-            }}
-            onMouseOut={(e) => {
-              if (works.length > 1) {
-                e.target.style.backgroundColor = "#f0f0f0";
-              }
-            }}
+            className="nav-btn"
           >
-            Next
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ marginLeft: "6px" }}
-            >
-              <path d="M9 18l6-6-6-6" />
+            <span>Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m9 18 6-6 6-6"/>
             </svg>
           </button>
         </div>
