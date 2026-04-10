@@ -35,7 +35,7 @@ const PortfolioItem = () => {
             </div>
             <img
               src={img}
-              alt={`Project ${index + 1}`}
+              alt={`Samuel Ayodeji Images ${index + 1}`}
               className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
@@ -66,7 +66,7 @@ const PortfolioItem = () => {
             <div className="w-full h-full flex items-center justify-center p-2">
               <img
                 src={selectedImage}
-                alt="Expanded View"
+                alt="Samuel Ayodeji Portfolio Project Expanded View"
                 className="max-w-full max-h-full object-contain rounded-xl shadow-2xl animate-scale-up border border-white/10"
               />
             </div>

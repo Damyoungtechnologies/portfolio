@@ -92,7 +92,7 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
             "My Branding projects and e-flyer projects are on my facebook page. Visit the link below to explore them.",
           type: "image",
           src: micokiki,
-          link: "https://www.facebook.com/share/18opJw5rXx/",
+          link: "https://www.facebook.com/adedamolasamuel.ayodeji?mibextid=ZbWKwL",
           tags: ["Coreldraw", "Gemini AI", "Print Design"],
         },
       ],

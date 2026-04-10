@@ -72,9 +72,9 @@ const Contact = () => {
                 <h3 className="dark:text-white" style={{ fontWeight: "700", color: "#1e293b", marginBottom: "15px" }}>Follow me</h3>
                 <div className="flex gap-4">
                   {[
-                    { name: "Facebook", url: "https://web.facebook.com/adedamolasamuel.ayodeji/" },
+                    { name: "Facebook", url: "https://www.facebook.com/adedamolasamuel.ayodeji?mibextid=ZbWKwL" },
                     { name: "Twitter", url: "https://x.com/SamuelAyodeji28" },
-                    { name: "Instagram", url: "https://www.instagram.com/adedamolasamuel.ayodeji" }
+                    { name: "Instagram", url: "https://www.instagram.com/damyoung027?igsh=MWh3a2JuaWg5MjZxdQ==" }
                   ].map((social) => (
                     <a
                       key={social.name}
