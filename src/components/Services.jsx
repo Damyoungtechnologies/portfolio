@@ -208,9 +208,9 @@ const Services = () => {
       <div className="w-[90%] mx-auto">
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <span className="section-label">My Expertise</span>
-          <h1 className="gradient-text font-extrabold dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "3rem" }}>
+          <h2 className="gradient-text font-extrabold dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "3rem" }}>
             Specialized Services
-          </h1>
+          </h2>
           <p className="mt-4 text-slate-500 dark:text-slate-400 max-w-[600px] margin-auto" style={{ margin: "1rem auto" }}>
             Delivering high-performance digital solutions tailored to your unique requirements.
           </p>

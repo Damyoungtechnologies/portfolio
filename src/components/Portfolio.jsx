@@ -7,9 +7,9 @@ const Portfolio = () => {
       <div className="w-[90%] mx-auto">
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <span className="section-label">Gallery</span>
-          <h1 className="gradient-text font-black dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "3rem" }}>
+          <h2 className="gradient-text font-black dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "3rem" }}>
             Photo Gallery
-          </h1>
+          </h2>
           <p className="mt-4 text-slate-500 dark:text-slate-400 text-lg max-w-[600px] mx-auto opacity-80">
             A visual collection of moments and captures that define my creative perspective.
           </p>

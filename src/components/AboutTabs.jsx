@@ -8,9 +8,9 @@ const AboutTabs = () => {
   return (
     <div className="about-content">
       <span className="section-label">Biography</span>
-      <h1 className="gradient-text font-extrabold mb-8 dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "2.5rem" }}>
+      <h2 className="gradient-text font-extrabold mb-8 dark:!from-blue-400 dark:!to-blue-200" style={{ fontSize: "2.5rem" }}>
         Discover Who I Am
-      </h1>
+      </h2>
 
       <div className="flex gap-4 mb-10 overflow-x-auto pb-2 scrollbar-none">
         {["about", "skills", "experience"].map((tab) => (

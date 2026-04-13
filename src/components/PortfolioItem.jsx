@@ -35,7 +35,7 @@ const PortfolioItem = () => {
             </div>
             <img
               src={img}
-              alt={`Samuel Ayodeji Images ${index + 1}`}
+              alt={`Samuel Ayodeji Portfolio Project ${index + 1} - Showcasing high-impact software solutions and technological innovation`}
               className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
