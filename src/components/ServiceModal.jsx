@@ -377,9 +377,70 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
           link: "https://damtasker.onrender.com/",
           tags: ["React", "Firebase", "Web App", "Eisen Hower Quadrant"],
         },
+        {
+          id: 2,
+          title: "TheraLink PLC",
+          description:
+            "Theralink is an AI-powered telemedicine platform with AI diagnostics for professionals, an AI chatbot, and a standalone emergency reporting system. Anyone can report danger. We solve trust, efficiency, and emergencies.",
+          type: "website",
+          src: "https://theralink.com.ng/",
+          link: "https://theralink.com.ng",
+          tags: ["React", "Python", "Django", "Cloudflare", "AI Diagnostics"],
+        },
+        {
+          id: 3,
+          title: "Goalchain",
+          description:
+            "Goalchain revolutionizes sports betting and prediction markets by completely eliminating the middleman. By leveraging the ultra-fast solana network and cryptographic data feeds from the TxLine. Real-time game events and AI-powered match analysis",
+          type: "website",
+          src: "https://goalchain.onrender.com/",
+          link: "https://goalchain.onrender.com/",
+          tags: [
+            "Typescript",
+            "Nodejs",
+            "Blockchain",
+            "Solana",
+            "TxLine Oracle data",
+            "AI game analysis",
+          ],
+        },
+        {
+          id: 4,
+          title: "Track It",
+          description:
+            "Track It is a real-time inventory management system for businesses to track stock levels, manage suppliers, monitor sales, and receive low-stock alerts.",
+          type: "website",
+          src: "https://https://pi-trackit.com/",
+          link: "https://https://pi-trackit.com/",
+          tags: [
+            "React",
+            "Typescript",
+            "Python",
+            "Inventory Management System",
+            "Django",
+            "",
+          ],
+        },
+        {
+          id: 5,
+          title: "EdgeLine OS",
+          description:
+            "EdgeLine OS is an autonomous AI-powered sports trading platform built on top of the TxLine oracle. It deploys four independent AI agents that continuously analyze live world cup data - odds movements, score updates and model probabilities and autonomously open, manage and settle trading positions without human intervention. Available in web app and telegram app",
+          type: "website",
+          src: "https://edgeline-os.onrender.com/",
+          link: "https://edgeline-os.onrender.com/",
+          tags: [
+            "Typescript",
+            "Nodejs",
+            "Blockchain",
+            "Solana",
+            "TxLine Oracle data",
+            "AI trading bot",
+          ],
+        },
       ],
     }),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -418,13 +479,14 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + works.length) % works.length
+      (prevIndex) => (prevIndex - 1 + works.length) % works.length,
     );
   };
 
   const renderContent = (work) => {
-    const commonClasses = "w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover";
-    
+    const commonClasses =
+      "w-full h-auto rounded-2xl shadow-2xl border border-white/10 object-cover";
+
     switch (work.type) {
       case "image":
         return (
@@ -434,19 +496,15 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
             alt={work.title}
             className={commonClasses}
             onError={(e) => {
-              e.target.src = "https://placehold.co/600x400/0f172a/white?text=Image+Not+Found";
+              e.target.src =
+                "https://placehold.co/600x400/0f172a/white?text=Image+Not+Found";
             }}
           />
         );
 
       case "video":
         return (
-          <video
-            controls
-            autoPlay
-            className={commonClasses}
-            src={work.src}
-          >
+          <video controls autoPlay className={commonClasses} src={work.src}>
             <source src={work.src} type="video/mp4" />
             <p>Your browser does not support the video tag.</p>
           </video>
@@ -484,13 +542,15 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div 
-        className="modal-content modal-animation group/modal" 
+      <div
+        className="modal-content modal-animation group/modal"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="modal-header">
           <div className="flex flex-col">
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 mb-1">Portfolio</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 mb-1">
+              Portfolio
+            </span>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">
               {title}
             </h2>
@@ -500,8 +560,19 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
             className="close-button"
             aria-label="Close modal"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
             </svg>
           </button>
         </div>
@@ -513,12 +584,17 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
               <div className="w-full lg:w-[60%] project-display group/display relative">
                 {renderContent(currentWork)}
                 <div className="absolute top-4 right-4 z-10">
-                  <span className={`type-indicator ${
-                    currentWork.type === "image" ? "bg-blue-500/20 text-blue-400 border border-blue-500/30" :
-                    currentWork.type === "video" ? "bg-rose-500/20 text-rose-400 border border-rose-500/30" :
-                    currentWork.type === "website" ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" :
-                    "bg-amber-500/20 text-amber-400 border border-amber-500/30"
-                  } backdrop-blur-md`}>
+                  <span
+                    className={`type-indicator ${
+                      currentWork.type === "image"
+                        ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                        : currentWork.type === "video"
+                          ? "bg-rose-500/20 text-rose-400 border border-rose-500/30"
+                          : currentWork.type === "website"
+                            ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                            : "bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                    } backdrop-blur-md`}
+                  >
                     {currentWork.type}
                   </span>
                 </div>
@@ -555,13 +631,27 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
                     className="group relative inline-flex items-center justify-center gap-3 w-full py-4 px-6 bg-[#0779e4] !text-white font-black text-sm uppercase tracking-widest rounded-xl shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:bg-[#0566c5] hover:translate-y-[-2px] transition-all duration-300"
                   >
                     <span>
-                      {currentWork.type === "website" ? "Visit Live Site" : 
-                       currentWork.type === "video" ? "Watch Showcase" : 
-                       currentWork.type === "iframe" ? "Launch Interactive" : 
-                       "View Full Details"}
+                      {currentWork.type === "website"
+                        ? "Visit Live Site"
+                        : currentWork.type === "video"
+                          ? "Watch Showcase"
+                          : currentWork.type === "iframe"
+                            ? "Launch Interactive"
+                            : "View Full Details"}
                     </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
-                      <path d="M5 12h14m-7-7 7 7-7 7"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="group-hover:translate-x-1 transition-transform"
+                    >
+                      <path d="M5 12h14m-7-7 7 7-7 7" />
                     </svg>
                   </a>
                 </div>
@@ -577,16 +667,26 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
             disabled={works.length <= 1}
             className="nav-btn"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m15 18-6-6 6-6"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m15 18-6-6 6-6" />
             </svg>
             <span>Previous</span>
           </button>
 
           <div className="dot-container">
             {works.map((_, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`dot ${i === currentIndex ? "active" : ""}`}
                 onClick={() => setCurrentIndex(i)}
                 style={{ cursor: "pointer" }}
@@ -600,8 +700,18 @@ const ServiceModal = ({ isOpen, onClose, title, serviceId }) => {
             className="nav-btn"
           >
             <span>Next</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m9 18 6-6 6-6"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m9 18 6-6 6-6" />
             </svg>
           </button>
         </div>
