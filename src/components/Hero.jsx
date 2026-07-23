@@ -41,19 +41,19 @@ const Hero = () => {
             Turning complex problems into elegant realities.
           </p>
           
-          <div className="flex flex-wrap gap-5">
+          <div className="flex flex-row gap-3 sm:gap-5 w-full max-w-[100vw] overflow-hidden">
             <a
               href={cv}
               download
-              className="px-8 py-4 bg-[#0779e4] !text-white rounded-xl font-bold text-sm uppercase tracking-wider shadow-2xl shadow-blue-500/20 hover:bg-[#0566c5] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 group border border-white/20"
+              className="px-4 sm:px-8 py-3 sm:py-4 bg-[#0779e4] !text-white rounded-xl font-bold text-[10px] sm:text-sm uppercase tracking-wider shadow-2xl shadow-blue-500/20 hover:bg-[#0566c5] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-1 sm:gap-2 group border border-white/20 whitespace-nowrap flex-1"
             >
               Download CV
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                className="group-hover:translate-y-1 transition-transform !text-white"
+                className="group-hover:translate-y-1 transition-transform !text-white sm:w-5 sm:h-5"
               >
                 <path
                   fill="none"
@@ -68,15 +68,15 @@ const Hero = () => {
             
             <a
               href="#services"
-              className="px-8 py-4 bg-white/5 backdrop-blur-lg !text-white border border-white/30 rounded-xl font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-all flex items-center gap-2 group"
+              className="px-4 sm:px-8 py-3 sm:py-4 bg-white/5 backdrop-blur-lg !text-white border border-white/30 rounded-xl font-bold text-[10px] sm:text-sm uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center gap-1 sm:gap-2 group whitespace-nowrap flex-1"
             >
-              Explore My Services
+              Explore Services
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                className="group-hover:translate-x-1 transition-transform"
+                className="group-hover:translate-x-1 transition-transform sm:w-5 sm:h-5"
               >
                 <path
                   fill="none"
