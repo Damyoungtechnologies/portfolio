@@ -7,9 +7,9 @@ const Footer = () => {
       className="bg-slate-900 dark:bg-black pt-20 pb-10 text-slate-300 border-t border-transparent dark:border-white/5 transition-colors"
     >
       <div className="container w-[90%] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 sm:gap-12 mb-16">
           {/* Brand Identity */}
-          <div className="flex flex-col gap-6">
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-6">
             <div className="flex items-center gap-2 mb-2">
               <div className="w-10 h-10 bg-[#0779e4] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
                 D
@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-white font-bold text-lg mb-8 relative inline-block">
               Quick Links
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-[#0779e4] rounded-full"></span>
@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
 
           {/* Services Portfolio */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-white font-bold text-lg mb-8 relative inline-block">
               Expertise
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-[#0779e4] rounded-full"></span>
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Details */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-white font-bold text-lg mb-8 relative inline-block">
               Have a Query?
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-[#0779e4] rounded-full"></span>
