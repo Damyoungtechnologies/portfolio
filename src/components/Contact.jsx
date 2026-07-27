@@ -20,9 +20,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="contact-container mx-auto flex flex-col lg:flex-row gap-10 items-stretch">
+        <div className="w-full flex flex-col lg:flex-row gap-10 items-stretch">
           {/* Contact Information Card */}
-          <div className="flex-1 flex flex-col gap-6">
+          <div className="w-full lg:flex-1 flex flex-col gap-6">
             <div className="glass-card p-8 rounded-2xl h-full flex flex-col justify-between dark:!bg-slate-800/50">
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-5">
@@ -92,7 +92,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form Card */}
-          <div className="flex-[1.5]">
+          <div className="w-full lg:flex-[1.5]">
             <div className="glass-card p-8 rounded-2xl premium-shadow h-full dark:!bg-slate-800/50">
               {state.succeeded ? (
                 <div className="flex flex-col items-center justify-center h-full text-center gap-4 py-10">
