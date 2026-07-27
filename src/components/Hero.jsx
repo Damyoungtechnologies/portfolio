@@ -5,7 +5,7 @@ import { cv } from "../assets";
 // import { herobackground } from "../assets";
 const Hero = () => {
   return (
-    <section id="home" className="hero min-h-[90vh] flex items-center pt-20 overflow-hidden relative">
+    <section id="home" className="hero min-h-[90vh] flex items-center pt-32 sm:pt-24 md:pt-20 overflow-hidden relative">
       {/* Background Decorative Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
@@ -41,7 +41,7 @@ const Hero = () => {
             Turning complex problems into elegant realities.
           </p>
           
-          <div className="flex flex-row gap-3 sm:gap-5 w-full max-w-[100vw] overflow-hidden">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full max-w-[100vw] overflow-hidden">
             <a
               href={cv}
               download
