@@ -43,7 +43,7 @@ const Contact = () => {
                     <h3 className="dark:text-white" style={{ fontWeight: "700", color: "#1e293b", marginBottom: "4px" }}>Email</h3>
                     <a
                       href="mailto:samuelayodeji027@gmail.com"
-                      className="smooth-transition hover:text-[#0779e4] dark:text-slate-400 dark:hover:text-blue-400"
+                      className="smooth-transition hover:text-[#0779e4] dark:text-slate-400 dark:hover:text-blue-400 break-all"
                       style={{ color: "#64748b", textDecoration: "none" }}
                     >
                       samuelayodeji027@gmail.com
@@ -72,18 +72,37 @@ const Contact = () => {
                 <h3 className="dark:text-white" style={{ fontWeight: "700", color: "#1e293b", marginBottom: "15px" }}>Follow me</h3>
                 <div className="flex gap-4">
                   {[
-                    { name: "Facebook", url: "https://www.facebook.com/adedamolasamuel.ayodeji?mibextid=ZbWKwL" },
-                    { name: "Twitter", url: "https://x.com/SamuelAyodeji28" },
-                    { name: "Instagram", url: "https://www.instagram.com/damyoung027?igsh=MWh3a2JuaWg5MjZxdQ==" }
+                    {
+                      name: "Facebook",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                      ),
+                      url: "https://www.facebook.com/adedamolasamuel.ayodeji?mibextid=ZbWKwL",
+                    },
+                    {
+                      name: "Twitter",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
+                      ),
+                      url: "https://x.com/SamuelAyodeji28",
+                    },
+                    {
+                      name: "Instagram",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                      ),
+                      url: "https://www.instagram.com/damyoung027?igsh=MWh3a2JuaWg5MjZxdQ==",
+                    },
                   ].map((social) => (
                     <a
                       key={social.name}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-100 dark:border-white/5 smooth-transition hover:border-[#0779e4] dark:hover:border-blue-400 hover:text-[#0779e4] dark:text-white shadow-sm"
+                      className="p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-100 dark:border-white/5 smooth-transition hover:border-[#0779e4] dark:hover:border-blue-400 hover:text-[#0779e4] dark:text-white shadow-sm flex items-center justify-center"
+                      aria-label={social.name}
                     >
-                      {social.name}
+                      {social.icon}
                     </a>
                   ))}
                 </div>
